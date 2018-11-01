@@ -1,0 +1,41 @@
+/* [2. Typography] */
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+
+@font-face {
+    font-family: "aisconverse";
+    src:url("../fonts/aisconverse.eot");
+    src:url("../fonts/aisconverse.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/aisconverse.ttf") format("truetype"),
+    url("../fonts/aisconverse.svg#aisconverse") format("svg"),
+    url("../fonts/aisconverse.woff") format("woff");
+    font-weight: normal; font-style: normal;
+}
+
+[data-icon]:before{ font-family:aisconverse!important;content:attr(data-icon);font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; }
+[class^=icon-]:before,[class*=" icon-"]:before{ font-family:aisconverse!important;font-style:normal!important;font-weight:400!important;font-variant:normal!important;text-transform:none!important;speak:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale; }
+
+.icon-map:before    { content: "a"; }
+.icon-svg:before    { content: "b"; }
+.icon-arrowl:before { content: "c"; }
+.icon-arrowr:before { content: "d"; }
+.icon               { display: inline-block; color:#FFFFFF; text-decoration: none; }
+
+h1{font-family: 'Lato', sans-serif;
+    font-size: 55px;
+    color: #fff;
+    font-weight: 700;
+	line-height: 50px;
+    margin-bottom: 22px;
+}
+
+h2{font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+body{font-family: 'Lato', sans-serif;
+		font-size: 24px;}

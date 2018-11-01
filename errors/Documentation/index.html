@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Wordsearch Error Pack - Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		
+		h3 { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+		
+		a { text-decoration: none; border-bottom: 1px dotted #999; }
+		a:hover { border-bottom: 1px dotted red; color: red; }
+		
+		.top { font-size: 12px; color: purple; }
+		
+		pre span { background-color: #DDD; }
+	</style>
+    
+</head>
+
+
+<body style="text-align: justify; font-family: 'Droid Sans', sans-serif;">
+<div class="container">
+	
+		<h3 class="center alt">Documentation for &quot;Wordsearch&quot; Theme by James Duquenoy - Version 1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Wordsearch&rdquo; - Error Pack</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 04/01/2014<br>
+					By: James Duquenoy<br>
+					Email: <a href="mailto:septimusfossett@gmail.com">septimusfossett@gmail.com</a><br>
+				  </strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing this theme! Hopefully any problems should be sorted out here, but if you still have unanswered questions send us an email at <a href="mailto:septimusfossett@gmail.com">septimusfossett@gmail.com</a> or post a comment on this item's Themeforest page.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#filesincluded">Files Included</a></li>
+			<li><a href="#htmlstructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Structure</a></li>
+			<li><a href="#javascript">JavaScript & jQuery</a></li>
+			<li><a href="#php">PHP</a></li>
+			<li><a href="#navigationbuttons">Navigation Buttons</a></li>
+			<li><a href="#htaccess">Setting up your .htaccess file</a></li>
+			<li><a href="#sources">Sources and Credits</a></li>
+		</ol>
+		
+<hr>
+
+<h3 id="filesincluded"><strong>A) Files Included</strong> - <a href="#toc" class="top">top</a></h3>
+
+<p>
+This error pack includes the error pages for 404, 403, 401, 500 and 503 errors. All the files for this pack are enlcosed in folders - the files for each error type are also in their own folders - it's fairly self-explanatory. In each folder for the error types there is an index.html and index.php file, both of which show exactly the same content, however the PHP file uses a little PHP code to generate random letters to fill out the wordsearch. Just in case you aren't using this on a server that has PHP, I've made the HTML file which just uses some random letters typed in by me.
+</p>
+
+<p>
+All of the CSS code is held within a single file, called <code>style.css</code> found in the CSS folder.
+</p>
+        
+    
+ <hr />       
+   
+
+<h3 id="htmlstructure"><strong>B) HTML Structure</strong> - <a href="#toc" class="top">top</a></h3>
+<p>
+In both the HTML and PHP files, the HTML code follows the general structure where all of the code for the major elements of the theme are grouped by comments. They are as follows:
+<pre>
+	&lt;!-- === WORDSEARCH === --&gt;
+	
+	... some code ...
+
+	&lt;!-- === MAIN TEXT CONTENT === --&gt;
+	
+	... some code ...
+
+	&lt;!-- === SEARCH FORM === --&gt;
+	
+	... some code ...
+
+	&lt;!-- === NAVIGATION BUTTONS === --&gt;
+	
+	... some code ...
+</pre>
+</p>
+
+<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following: (note this CSS is not relevant to this template)</p>
+
+<pre>	#primaryContent a {
+		color: #someColor;
+	} 
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+
+<pre>	#wrap #primaryContent a {
+		color: #someColor;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p>
+
+<p>Finally, if you want the Favicon of your site to work, use it as you would normally by adding the filepath to your image to this section of the header:
+<pre>	&lt;link rel="shortcut icon" href="/path/to/favicon.gif"&gt;</pre>
+	</p>
+<hr />
+
+<h3 id="cssFiles"><strong>C) CSS Structure</strong> - <a href="#toc" class="top">top</a></h3>
+<p>Like with the HTML Structure, comments are also used to split the CSS code up into sections. Again, if you're looking, for example, for the CSS code for the navigation buttons, it'll be under the section commented as 'Navigation Buttons'. It's all fairly self-explanatory. They are as follows:
+<pre>
+	/* === GENERAL === */
+	
+	... some code ...
+
+	/* === WRAP === */
+	
+	... some code ...
+
+	/* === MAIN TEXT CONTENT === */
+	
+	... some code ...
+
+	/* === NAVIGATION BUTTONS === */
+	
+	... some code ...
+	
+	/* === WORDSEARCH === */
+	
+	... some code ...
+	
+	/* === SEARCH FORM === */
+	
+	... some code ...
+	
+	/* === RESPONSIVE CSS === */
+	
+	... some code ...
+</pre>
+The responsive css section at the bottom of the <code>style.css</code> file contains mostly CSS Media Queries, which change CSS styles for certain elements depending on screen size. If for some reason you wanted to remove responsive functionality from the theme, simply remove that section of CSS code.
+</p>
+
+<hr />
+
+<h3 id="javascript"><strong>D) JavaScript & jQuery</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This 404 template uses JavaScript, mostly the jQuery JavaScript Library, which adds more functionality to standard JS while reducing the amount of code needed. You can find more information about jQuery <a href="http://jquery.com/" target="_blank">here</a>. The jQuery library is imported into the theme by the following line of code in the header:</p>
+        <pre>	&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;</pre>
+
+<p>
+There is also a fair amount of Javascript (and jQuery) code in the headers of each error page. These segments of code aren't placed in external JS files because they need to be on the page itself - also the jQuery lines which control the animations of the wordsearch are different for each error page, so to save having multiple files for each instead the jQuery code is in the header of each.
+</p>
+
+<p>
+There are comments next to each line of jQuery which controls the animation for the wordsearch letters, identifying which letter is being animated. For example:
+<pre>
+	/* 4 */ $(this).delay(1500).queue(function(){ $( ".one" ).addClass("selected"); $(this).dequeue(); })
+	/* 0 */ .delay(500).queue(function(){ $( ".two" ).addClass("selected"); $(this).dequeue(); })
+	/* 4 */ .delay(500).queue(function(){ $( ".three" ).addClass("selected"); $(this).dequeue(); })
+</pre>
+To explain this simply, after the comment we set the delay between the previous animation with <code>.delay()</code>, then run the jQuery functions that add the CSS class <code>.selected</code> to the individual letter's LI element, then we tell jQuery to move on to the next line of animation code.</p>
+
+<p>
+It's worth noting that each letter we are animating has a CSS class such as '.one', '.two' etc, so that we can animate them individually from jQuery. So, if you change the wordsearch letters being animated to have longer words, make sure each letter you want to animate has a 'number' class, assigned in the HTML (see example below) and also correctly pointed to in the jQuery. If you need help changing the wordsearch animations, please feel free to <a href="mailto:septimusfossett@gmail.com">send me an email</a> and I'll talk you through it.
+<pre>	&lt;li class="one"&gt;&lt;/li&gt;</pre>
+</p>
+
+<p>
+The rest of the jQuery code in the header of each error page is for making sure the Wordsearch stays a perfect square, keeping each wordsearch LI element the same size and square-shaped, and also for making sure the text inside the wordsearch resizes responsively.
+</p>
+
+<hr />
+     
+  <h3 id="php"><strong>E) PHP</strong> - <a href="#toc" class="top">top</a></h3>
+<p>As explained in the <a href="#filesincluded">Files Included</a> section, for each error type there is a index.php and index.html file. In the index.php file there is some extra PHP code which generates random letters to fill up the wordsearch.</p>
+
+<p>In the header of the file, you'll see one line of PHP code:
+<pre>	&lt;?php $letters_array = range("a","z"); ?&gt;</pre>
+This is the line of code that generates a sequence of letters (called an array) ranging from A to Z. This means that all the letters of the alphabet are stored in an array called <code>$letters_array</code>. Now we can extract random letters from that array and put them into the wordsearch.
+</p>
+
+<p>Inside the LI elements of the wordsearch not filled up with error message letters (404 for example), you'll notice they contain the following line of PHP code:
+<pre>	&lt;?php echo $letters_array[array_rand($letters_array)]; ?&gt;</pre>
+This line selects a random letter from the <code>$letters_array</code> array using the <a href="http://www.w3schools.com/php/func_array_rand.asp" target="_blank">array_rand() function</a>. This function chooses a random part of the array (called the 'key') which is a number, but which we convert to its corresponding letter by feeding it back through the array and outputting the random letter using PHP <code>echo</code>. If you want any more random letters any where, just copy and paste that line of code to wherever you want the letters generated - but make sure you have the line of PHP in the header or nothing will work.
+</p>
+  
+<hr />
+     
+  <h3 id="navigationbuttons"><strong>F) Navigation Buttons</strong> - <a href="#toc" class="top">top</a></h3>
+     
+     <p>It's relatively simple to customise the normal text in this theme, but it is slightly more complicated to change the text shown in the Wordsearch grid. As you can see in the HTML file, there are around 64 LI elements that make up each individual cell in the wordsearch grid. Most of these contain the PHP code <code>&lt;?php echo $chars[rand(0,strlen($chars)-1)]; ?&gt;</code>, which is used to generate random letters in keeping with the priciples of a wordsearch. Among the long list of random letters (in the HTML files) or lines of PHP code to generate random letters (in PHP files) there are a few LI elements with classes such as "one", "two" etc. containing the letters to be animated (i.e. 404 page not found). If you want to change these, bear in mind you need to work out which Li to change so they show up in the correct place in the grid. Also, use the class system to number the letters in the order you want them to animate, and make sure you add or remove the appropriate numbers from the jQuery code at the top of the pages as mentioned in the <a href="#javascript">Javascript & jQuery</a> section. Bear in mind that CSS will force the letters you enter to be uppercase.</p>
+     <p> If you need help changing the wordsearch animations, please feel free to <a href="mailto:septimusfossett@gmail.com">send me an email</a> and I'll talk you through it.
+</p>
+
+<p>
+<h4>Changing the Navigation Links</h4>
+If you're familiar with HTML, this shouldn't be too tricky either. You'll see sections in the error file under the comment heading (see <a href="#htmlstructure">HTML Structure</a> section for more info) <code>&lt;!-- === NAVIGATION BUTTONS === --&gt;</code>. The buttons are standard HTML links, so you can type in the URL to your content inbetween the <code>href=""</code> part. If you add more links, make sure each A element has the <code>.navigation</code> class. Simply type the content of the button inbetween the A tags, for example: <code>&lt;a&gt;YOUR CONTENT&lt;/a&gt;</code><br />An example button link to Google:
+<pre>	&lt;a class="navigation" href="http://google.co.uk"&gt;Google&lt;/a&gt;</pre>
+As you may be aware, the CSS icon font <a href="http://fontawesome.io target="_blank">Font Awesome</a> is used in this pack for social icons which can be used in navigation buttons. The HTML for the links are the same, and you put the URL to your social network in the same place as before, but instead of typing words for the value of the buttons you use the Font Awesome code to generate the icons. Here's example code for a Twitter icon button:
+<pre>	&lt;a class="navigation" href="http://twitter.com/Septimusfossett"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/a&gt;</pre>
+The code that generates the icon is <code>&lt;i class="fa fa-twitter"&gt;</code>, a HTML element used to make text italic. All of the CSS for font awesome and the font files are held in the Font Awesome folder, and there is no need to edit any of it. There are certain names for different social icons, but mostly the classes match the name of the social network - but remember to include the Font Awesome classes such as <code>fa fa-SOCIALNETWORKNAME</code> otherwise the icon's won't work. Here is example code for some major social networks:
+<pre>
+	&lt;a class="navigation" href="YOUR-TWITTER-URL"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/a&gt;
+	&lt;a class="navigation" href="YOUR-FACEBOOK-URL"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/a&gt;
+</pre>
+It's fairly self explanatory, and you can see all of the social and other icons available in Font Awesome by using the <a href="http://fontawesome.io/cheatsheet/" target="_blank">Font Awesome Cheat Sheet</a>, or look at the picture below (but remember the <code>fa</code> then space, then the classes listed below!).</p>
+<p>
+<img src="assets/images/fa-social.png" />
+</p>
+     
+     <hr>
+     
+<h3 id="htaccess"><strong>G) Setting up your .htaccess file</strong> - <a href="#toc" class="top">top</a></h3>
+     
+<p>It's very important that you ensure that your webhost allows custom error pages, but as you've just bought this theme then hopefully that is not a problem!</p>
+     <p>A .htaccess (<a href="http://en.wikipedia.org/wiki/Htaccess" target="_blank" title="More information on Wikipedia">HyperText Access</a>) is a configuration file used by web servers to control and configure your server. It has many uses and features, such as blocking IPs, rewriting long, unattractive domains and many more, but we're only interested in the part allowing you to add custom error pages instead of the default, ugly ones.</p>
+     <p>The first step is to find the root directory (where your homepage is) on your server, and if it is not already there create a new blank text file with a simple editor like Notepad on Windows. Save your new file as &quot;.htaccess&quot;. Make sure you start the filename with a dot, so that the file remains hidden. If your OS won't let you start a filename with a dot, make it without then rename it later, once it is on your server (for example with FTP). Make sure you rename and remove any file extension such as &quot;.txt&quot;.</p>
+     <p>To make your .htaccess file point to your new error pages, just add the following line of code (for 404 error):</p>
+     <pre>		ErrorDocument 404 /errors/404/index.html</pre>
+     <p>Starting the file path with a slash tells the server to look in the root directory of your server, then follow it up with the appropriate location of your error pages.</p>
+     
+     <p style="color: red"><strong><em>Note: Don't include a full URL (for example &quot;http://www.yourdomain.com&quot;), as this will cause errors in the .htaccess file.</em></strong></p>
+     <p>Finally save and upload the .htaccess file, and ensure that your server is set up to allow custom error pages, and has them enabled.<br>
+      Below is the appropriate code to enter in your .htaccess file for each error type included in this pack (make sure each is on a new line):</p>
+      <pre>		ErrorDocument 401 /errors/401/index.php
+      		ErrorDocument 403 /errors/403/index.php
+       		ErrorDocument 404 /errors/404/index.php
+      		ErrorDocument 500 /errors/500/index.php
+       		ErrorDocument 503 /errors/503/index.php
+       </pre>
+
+       <hr>
+
+		<h3 id="sources"><strong>H) Sources and Credits</strong> - <a href="#toc" class="top">top</a>        </h3>
+	  <ul>
+			<li><a href="http://fontawesome.io" target="_blank">Font Awesome</a></li><br>
+			<li>'Source Sans Pro' font from <a href="http://www.google.com/fonts/specimen/Source+Sans+Pro" target="_blank">Google Fonts</a></li>
+      </ul>
+		
+<hr>
+		
+		<p>Once again, thank you very much for purchasing this theme, and I hope it serves you well!</p>
+		<p>If you still have unanswered questions, we'd be more than happy to try and sort things out by email - feel free to send us one at: <a href="mailto:septimusfossett@gmail.com">septimusfossett@gmail.com</a>, and we'll get back to you as soon as we can (which shouldn't be too long).</p>
+		<p>Another great way to get help is by posting a comment on the <a href="http://www.themeforest.net/item/a-timely-error-animated-clock-error-pack/2972222">Themeforest</a> page where you bought this theme. Alternatively, you might want to consider visiting the Themeforest forums and asking your question in the &quot;<a href="http://themeforest.net/forums/topic/item-discussion/26">Item Discussion</a>&quot; section. Many thanks once again!</p> 
+		
+<p class="append-bottom alt large"><strong>James Duquenoy</strong>	  </p>
+<p><a href="http://themeforest.net/user/Septimus_fossett/portfolio" target="_blank">Also Available on Themeforest</a> | <a href="#toc">Go To Table of Contents &uarr;</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

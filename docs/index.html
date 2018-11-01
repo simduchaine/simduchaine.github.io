@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Sonoran - Template Help</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="layout" class="">
+	<aside id="menu" class="">
+        <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="Sonoran">Sonoran</a>
+        </div>
+        <div class="menu-links">
+            <ul>
+                <li><a href="#getting-started" class="">Getting Started</a></li>
+                <li><a href="#slideshow">Slideshow</a></li>
+                <li><a href="#yt">YouTube video</a></li>
+                <li><a href="#countdown">Countdown</a></li>
+                <li><a href="#logo-settings">Logo Settings</a></li>
+                <li><a href="#textblock-settings">Text Block Settings</a></li>
+                <li><a href="#social-links">Social Links</a></li>
+                <li><a href="#copyrights">Copyrights</a></li>
+                <li><a href="#subscription-form">Subscription Form</a></li>
+                <li><a href="#google-maps">Google Maps</a></li>
+                <li><a href="#scrolltop-settings">ScrollTop Button Settings</a></li>
+                <li><a href="#favicon-settings">Favicon Settings</a></li>
+                <li><a href="#font-settings">Font Settings</a></li>
+            </ul>
+        </div>
+	</aside>
+    <!-- /#menu -->
+
+	<section id="main">
+        <nav class="slideshow-bar">
+            <a id="menu-link" href="#menu"><img src="images/sidetoggle.png" alt=""></a>
+        </nav>
+        <!-- /.slideshow-bar -->
+
+        <header class="header content">
+            <div>
+                <h1>Sonoran Template Help</h1>
+                <small class="version">Version 1.0</small>
+                <h4>Cross Browser, High Quality and Full Responsive HTML5 Coming Soon Template.</h4>
+                <p>Thank you very much for purchasing our template. It is built with the latest HTML5 and CSS3 technologies, but at the same time it is also made compatible with older browser versions. If you have any questions that aren’t covered in this article, please feel free to email us on our user page, you can find the contact form <a href="http://themeforest.net/user/Aisconverse">here</a>.</p>
+                <p>Don’t forget to rate this template, it helps us improve our products. <img src="images/rate.png" alt=""></p>
+                <p>We invite you to view our <a href="http://themeforest.net/user/Aisconverse/portfolio" target="_blank">portfolio</a>.</p>
+                <h4>Thanks so much!</h4>
+            </div>
+        </header>
+        <!-- /.header -->
+
+        <section id="getting-started" class="content slide">
+            <div>
+                <h2>Getting Started</h2>
+                <h4 class="warning">Requirements</h4>
+                <p>For installing this template you need to make sure that you have the following extensions on your webserver. You will need to contact your webhost if the following requirements are missing.</p>
+                <ul>
+                    <li>PHP 5.2+;</li>
+                    <li>PHP Mail support;</li>
+                    <li>Enabling JavaScript in the web browser.</li>
+                </ul>
+                <h4>Installation</h4>
+                <p>Unzip the downloaded Sonoran file to the local disk on your computer. Inside the extracted folder there will be 2 folders labeled <code>docs</code> and <code>html</code>. Using an FTP client (e.g. Filezilla or Total Commander), you need to copy all the contents of the <code>html</code> folder to your server.</p>
+
+            </div>
+        </section>
+        <!-- #getting-started -->
+
+        <section id="slideshow" class="content slide">
+            <div>
+                <h2>Slideshow</h2>
+                <h4>Slider Images</h4>
+                <p class="question">To change the image background you will need to edit the file <code>index.html</code>. You have to add more images after this code to add images to the slideshow or remove current images. Download these images into the <code>/slides</code> folder. Resolution and image size can be of your choice. However, it is recommended not to exceed the images file size beyond 1MB. Filename can be anything and must be the same as previously written in the <code>index.html</code> code. The order of the slides is one by one as specified in <code>index.html</code>. If you have a single image, the slider navigation arrows will hide. In obligatory image attributes <mark>alt</mark> can be written with the name of the image or anything according to your choice.</p>
+                <pre class="snippet" data-language="css">
+                    96 : &lt;img src=&quot;slides/001.jpg&quot; alt=&quot;Image Name&quot;&gt;
+                    97 : &lt;img src=&quot;slides/002.jpg&quot; alt=&quot;Image Name&quot;&gt;
+                    98 : &lt;img src=&quot;slides/003.jpg&quot; alt=&quot;Image Name&quot;&gt;
+                    99 : &lt;img src=&quot;slides/004.jpg&quot; alt=&quot;Image Name&quot;&gt;
+                </pre>
+                <p class="warning">But if you don’t specify any image, you will have a solid background color, and you can change that color choice in <code>css/layout.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    7 : body            { background-color: #343434; }
+                </pre>
+                <h4>Slideshow settings</h4>
+                <p class="question">To change the slideshow settings you have to edit the file <code>js/custom.js</code>.</p>
+                <pre class="snippet" data-language="js">
+                    6: sliderFx: 'slide',       // Slider effect. Can be 'slide' or 'fade'
+                    7: sliderInterval: 9000,   // Interval between image change. Set 0 to disable auto slideshow
+                    8: sliderSpeed: 1500       // Speed of the slider effect in milliseconds
+                </pre>
+                <p>If you want to change a color overlay that covers the background slideshow, you will have to edit the <code>css/slider.css</code> background-color. To change the opacity, you will have to edit the opacity in 2 places. Firstly, edit <code>opacity: 0.8</code>. The value should be between 0 and 1. Now secondly you will have to edit the <code>filter: alpha(opacity=80);</code>.  The value should be between 0 and 100. It should be equivalent to the previous values. The syntax of the code is mentioned below as an example:</p>
+                <pre class="snippet" data-language="css">
+                    7 : #slides .slides-container > div:after   { background-color: #6D5333; opacity: 0.8; filter: alpha(opacity=80); }
+                </pre>
+                <p>If you want to change a dot-textured overlay that covers the background slideshow you will have to edit <code>css/slider.css</code>. His name can be anything of your choice. By default, <mark>pattern.png</mark>. Pattern can be located in a folder <code>/images</code>.</p>
+                <pre class="snippet" data-language="css">
+                    6 : #slides .slides-container > div:before  { background: url(../images/pattern.png) 0 0 repeat; }
+                </pre>
+            </div>
+        </section>
+        <!-- /#slideshow-version -->
+
+        <section id="yt" class="content slide">
+            <div>
+                <h2>YouTube movies as background</h2>
+                <p class="question">To enable YouTube video as background you have to remove class <mark>none</mark> in <code>index.html</code> file:</p>
+                <pre class="snippet" data-language="css">
+                    106 : &lt;div id=&quot;ytvideo&quot; class=&quot;&quot;&gt; /* add/remove class none to disable/enable video as background */
+                </pre>
+                <p>During loading video file from YouTube, you can change background image. That means, before the video is loaded you can manipulate slideshow.</p>
+                <h4>YouTube video settings</h4>
+                <p class="question">To change the video settings you have to edit the file <code>js/custom.js</code>.</p>
+                <pre class="snippet" data-language="js">
+                    21 : loop: true,  // True or false loops the movie once ended.
+                    22 : startAt: 0,  // Set the seconds the video should start at.
+                    23 : autoPlay: true,  // True or false play the video once ready.
+                    24 : showControls: false, // Show or hide the controls bar at the bottom of the page.
+                    25 : addRaster: false, // Show or hide the background pattern image
+                    26 : videoURL: 'youtu.be/EDir9-UoPjo', // background video URL
+                    27 : mute: true // video sound
+                </pre>
+                <p>If you want to change a color overlay that covers the background video, you will have to edit the <code>css/YTPlayer.css</code> background-color. To change the opacity, you will have to edit the opacity. The syntax of the code is mentioned below as an example:</p>
+                <pre class="snippet" data-language="css">
+                    230 : .YTPOverlay{ background-color: #6D5333; opacity: 0; }
+                </pre>
+                <p>If you want to change a dot-textured overlay that covers the background video you will have to edit <code>css/YTPlayer.css</code>. His name can be anything of your choice. By default, <mark>pattern.png</mark>. Pattern can be located in a folder <code>/images</code>.</p>
+                <pre class="snippet" data-language="css">
+                    231 : .YTPOverlay.raster{ background: url("../images/pattern.png"); opacity: 0; }
+                </pre>
+            </div>
+        </section>
+        <!-- /#yt -->
+
+        <section id="countdown" class="content slide">
+            <div>
+                <h2>Countdown</h2>
+                <p class="question">If you do not want to display the <strong>countdown</strong> block, you can remove it from the HTML page <code>index.html</code>.</p>
+                <pre class="snippet" data-language="css">
+                    39 : &lt;div id=&quot;countdown&quot;&gt;&lt;/div&gt;
+                </pre>
+                <h4>Countdown settings</h4>
+                <p class="warning">You can set the date in the <code>js/custom.js</code> for the countdown.</p>
+                <pre class="snippet" data-language="js">
+                    9: countdownTo: '2014/01/01', // Change this in the format: 'YYYY/MM/DD'
+                </pre>
+                <h4>Visualization settings</h4>
+                <p>To change the color and font size, you have to edit <code>css/countdown.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    9 : #countdown span   { font-size: 100px; color:#ffd565; }
+                </pre>
+                <p>To customize word <mark>days</mark> and <mark>countdown</mark>, you have to edit <code>css/countdown.css</code> too.</p>
+                <pre class="snippet" data-language="css">
+                    12 : #countdown ins  {  font-size: 21px; color:#ffd565; }
+                </pre>
+            </div>
+        </section>
+        <!-- #countdown -->
+
+        <section id="logo-settings" class="content slide">
+            <div>
+                <h2>Logo Settings</h2>
+                <p class="question">To change main logo you have to reload new logo image in a <code>/images</code> folder. If you have another name for your logo, you will have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="js">
+                    24 : <img src="images/logo.png" alt="" class=""> // change &quot;src&quot; and &quot;alt&quot; attribute (not required)
+                </pre>
+                <p class="warning">If you want to add some slogan or any kind of text together/instead of the logo, you have to edit <code>index.html</code> (here you should add/remove <mark>none</mark> class).</p>
+                <pre class="snippet" data-language="js">
+                    24 : &lt;img src=&quot;images/logo.png&quot; alt=&quot;&quot; class=&quot;none&quot;&gt; // to hide logo
+                    25 : &lt;span id=&quot;logo-text&quot; class=""&gt;Sitename&lt;/span&gt; // to show slogan
+                </pre>
+                <h4>Visualization settings</h4>
+                <p>To change the font size or color of your slogan, you will have to edit <code>css/logo.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    7 : #logo-text  { color:#F2DCA1; font-size: 40px; }
+                </pre>
+            </div>
+        </section>
+        <!-- /#logo-settings -->
+
+        <section id="textblock-settings" class="content slide">
+            <div>
+                <h2>Text Block Settings</h2>
+                <p class="question">To change the text of the headline, you will have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="js">
+                    31 : &lt;h1&gt;We are working on&lt;br&gt;something awesome&lt;/h1&gt; // The &lt;br&gt; tag inserts a single line break.
+                </pre>
+                <p>To change the font size, color and the font weight of main headline, you will have to edit <code>css/typography.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    25 : font-size: 55px;
+                    26 : color: #fff;
+                    27 : font-weight: 400;
+                </pre>
+                <p class="question">To change the text under headline, you will have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="js">
+                    32 : <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </pre>
+                <p>To change the font size, color and font weight of that text, you will have to edit <code>css/layout.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    28 : #maincontent > p    { font-size: 17px; font-weight: 300; color:#fff; }
+                </pre>
+            </div>
+        </section>
+        <!-- /#textblock-settings -->
+
+        <section id="social-links" class="content slide">
+            <div>
+                <h2>Social links</h2>
+                <p class="question">To change the social network links, you will have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="css">
+                    50 : &lt;a href=&quot;#&quot;&gt;twitter&lt;/a&gt;
+                    51 : &lt;a href=&quot;#&quot;&gt;facebook&lt;/a&gt;
+                    52 : &lt;a href=&quot;#&quot;&gt;google+&lt;/a&gt;
+                </pre>
+                <p>You can add more links after this code to add links or remove current ones. Replace the <code>"#"</code> of links attribute <code>href="#"</code> to your actual profile link and change the name of the social network.</p>
+                <h4>Visualization settings</h4>
+                <p>You can also change the font size and the color, you just have to edit <code>css/footer_line.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    8 : followers > a           { font-size: 14px; color:#f1dca2; }
+                    9 : followers > a:hover     { color:#fff; } /* change links color after hovering */
+                </pre>
+            </div>
+        </section>
+        <!-- #social-links -->
+
+        <section id="copyrights" class="content slide">
+            <div>
+                <h2>Copyrights</h2>
+                <p class="question">To change the text of copyrights, you just have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="css">
+                    60 : &lt;p class=&quot;copyrights&quot;&gt;Made in &lt;a href=&quot;http://aisconverse.com/&quot; target=&quot;_blank&quot;&gt;Aisconverse&lt;/a&gt;&lt;/p&gt;
+                </pre>
+                <p>Replace <code>href="http://aisconverse.com/"</code> of link to your actual website.</p>
+                <h4>Visualization settings</h4>
+                <p>For changing the font size and the color, you will have to edit <code>css/footer_line.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    3 : .copyrights             { font-size: 14px; color:#baad8b; }
+                    4 : .copyrights > a         { color:#baad8b; } /* links color */
+                    5 : .copyrights > a:hover   { color:#fff; } /* change links color after hovering */
+                </pre>
+            </div>
+        </section>
+        <!-- #copyrights -->
+
+        <section id="subscription-form" class="content slide">
+            <div>
+                <h2>MailChimp Subscription Form</h2>
+                <p class="warning">If you do not want to display the Newsletter block, you can just add class <mark>none</mark> to the page <code>index.html.</code></p>
+                <pre class="snippet" data-language="js">
+                    68 : &lt;section id=&quot;newsletter&quot; class=&quot;none&quot;&gt; …
+                </pre>
+                <h4>Newsletter settings</h4>
+                <p class="warning">You need to change the Mailchimp's List URL in your <code>index.html</code> for the Newsletter form.</p>
+                <pre class="snippet" data-language="html">
+                    <!--  Replace form action URL -->
+                    <form action="http://tratata.us7.list-manage.com/subscribe/post?u=fa170a14a7b532b4da7c006e0&amp;id=6bdd92a928" method="post">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input name="email" placeholder="Enter your email here" required="required" type="email">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="">
+                    </form>
+                </pre>
+                <p class="question">To change the validation messages, you will have to edit <code>js/custom.js</code>.</p>
+                <pre class="snippet" data-language="js">
+                    19 : successText: 'Thanks. You have successfully subscribed. Please check email to confirm.', // text after successful subscribing
+                    20 : errorText: 'Please, enter a valid email' // text, if email is invalid
+                </pre>
+                <h4>Visualization form settings</h4>
+                <p>To change the font size, color, background color and font weight of subscription form, you will have to edit <code>css/newsletter.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    19 : #feed-form input[type="email"]  { background-color: #fff;  font-size: 20px; color:#5e4931; font-weight: 300;  }
+                    21 : #feed-form input[type="submit"] { background-color: #ffd565; }
+                    22 : #feed-form input[type="submit"]:hover { background-color: #fabf20; } /* changing background color after hovering */
+                </pre>
+                <h4>Visualization text settings for Newsletter</h4>
+                <p>To change the font size, color and font weight of Newsletter headline, you will have to edit <code>css/typography.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    33 : font-size: 35px;
+                    34 : line-height: 40px;
+                    35 : color: #fff;
+                </pre>
+                <p>To change the text under Newsletter headline, you have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="js">
+                    72 : <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </pre>
+                <p>To change the font size, color and font weight of that text, you just have to edit <code>css/newsletter.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    6 : #newsletter > article > aside > p   { font-size: 17px; font-weight: 300;  color:#fff; }
+                </pre>
+            </div>
+        </section>
+        <!-- #subscription-form -->
+
+        <section id="google-maps" class="content slide">
+            <div>
+                <h2>Google Maps</h2>
+                <h4>Settings</h4>
+                <p class="warning">If you do not want to display the google maps block, you can always add class <mark>none</mark> to the page <code>index.html.</code></p>
+                <pre class="snippet" data-language="js">
+                    86 : &lt;div id=&quot;map_canvas&quot; class=&quot;none&quot;&gt;&lt;/div&gt;
+                </pre>
+                <p class="question">Edit the<code>js/custom.js</code> file to configure the google map. At first, you can get the latitude and the longitude of a place from <a href="http://itouchmap.com/latlong.html" target="_blank">here</a>. Now click on the map and move the marker or enter an address on the latitude and the longitude coordinates in "<strong>Get the Latitude and Longitude of a Point</strong>" block. Then you can insert your coordinates to <code>custom.js</code> code:</p>
+                <pre class="snippet" data-language="js">
+                    4 : locations: [-34.397, 150.644]	    // latitude and longitude coordinates to center the map on
+                </pre>
+                <p>After determined the coordinates start changing InfoBox.</p>
+                <pre class="snippet" data-language="js">
+                    11 : infoBoxName: 'Aisconverse',      // write the actual name in InfoBox
+                    12 : infoBoxImg: 'images&frasl;map-label.png', // path for changing logo in map infoBox
+                    13 : infoBoxDescription: 'J. Savickio str. 4 Vilnius, LT-01108 Lithuania',   // write the actual address in Infobox.
+                    16 : infoBoxUrl: 'http:&frasl;&frasl;aisconverse.com'      // write the actual url in InfoBox
+                    17 : infoBoxUrlText: 'Aisconverse.com'      // write the url text
+                    18 : mapMarker: 'images&frasl;map-marker.png' // path for changing map marker
+                </pre>
+                <p class="warning">In the <mark>13 line</mark> you may use <code>&lt;br&gt;</code> tag to enter the line breaks, do not separate paragraphs.</p>
+                <p>To change InfoBox background color, you will have to edit <code>css/map.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    9 : .ib-inner  { background-color: #232323; }
+                </pre>
+            </div>
+        </section>
+        <!-- #google-maps -->
+
+        <section id="scrolltop-settings" class="content slide">
+            <div>
+                <h2>ScrollTop Button Settings</h2>
+                <p>To change the background color, border radius along width and height, you will have to edit <code>css/layout.css</code>.</p>
+                <pre class="snippet" data-language="css">
+                    33 : #scrolltop          { background-color: #3e3e3e; border-radius: 5px; width: 50px; height: 50px; }
+                    34 : #scrolltop:hover    { background-color: #161311; } /* changing background color after hovering */
+                </pre>
+            </div>
+        </section>
+        <!-- /#scrolltop-settings -->
+
+        <section id="favicon-settings" class="content slide">
+            <div>
+                <h2>Favicon Settings</h2>
+                <p>To change the favicon you will have to reload a new <mark>favicon.ico</mark> in a site root. If you have another name for your favicon, you just have to edit <code>index.html</code>.</p>
+                <pre class="snippet" data-language="js">
+                    8 : &lt;link href=&quot;favicon.ico&quot; rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot;> // replace favicon.ico to file name
+                </pre>
+            </div>
+        </section>
+        <!-- /#favicon-settings -->
+
+        <section id="font-settings" class="content slide last">
+            <div>
+                <h2>Font Settings</h2>
+                <h4>Typography</h4>
+                <p>To change the font-family you will have to edit the file <code>css/typography.css</code>. If the font is a standard one, built the system by default, you can just write it here.</p>
+                <pre class="snippet" data-language="js">
+                    24 : body { font-family: 'Arial', sans-serif;  } // or whatever you want (e.g. "Verdana")
+                </pre>
+                <p class="warning">Also you can use <a href="http://www.google.com/fonts" target="_blank" title="Google Font">Google Font</a> and connect it to your website.</p>
+                <ol>
+                    <li>Just go to <a href="http://www.google.com/fonts" target="_blank">http://www.google.com/fonts</a>.</li>
+                    <li>Choose the appropriate font.</li>
+                    <li>Click the <strong>Quick-use</strong> button (<img src="images/quick_use_static.png" alt="">).</li>
+                    <li>Choose the styles that you want;</li>
+                    <li>Choose the character sets that you want.</li>
+                    <li>Below that click on the @import tab and copy this line.</li>
+                    <li>Paste this line to that <code>css</code> file on 3d line instead of the default (e.g.):
+                        <pre class="snippet" data-language="css">
+                            3 : @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+                        </pre>
+                    </li>
+                    <li>At last, copy font-family name from Google Fonts website and paste on 24th line (e.g.):
+                        <pre class="snippet" data-language="js">
+                            24 : body { font-family: 'Open Sans', sans-serif;  }
+                        </pre>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <!-- /#font-settings -->
+
+        <footer id="footer">
+            <p>&copy; 2008-2014 <a href="http://aisconverse.com" target="_blank">Aisconverse</a>. All Rights Reserved.</p>
+        </footer>
+        <!-- /#footer -->
+
+	</section>
+        <!-- /#main -->
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.plugins.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
